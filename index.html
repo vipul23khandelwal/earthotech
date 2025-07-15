@@ -302,20 +302,32 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="fade">
-    <div class="container">
-      <h2>Let’s Build Your Digital Future</h2>
-      <form class="contact-form" onsubmit="event.preventDefault();alert('Thank you! We will be in touch shortly.');this.reset();">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Tell us about your project…" required></textarea>
-        <button class="btn primary" type="submit">Send Message</button>
-      </form>
-      <p style="margin-top:2rem;text-align:center;">
-        📧 <a href="mailto:contact@eartho.tech">contact@eartho.tech</a> · 📞 +91‑9971‑331189
-      </p>
-    </div>
-  </section>
+ 
+<!-- Contact -->
+<section id="contact" class="fade">
+  <div class="container">
+    <h2>Let’s Build Your Digital Future</h2>
+    <form 
+      class="contact-form" 
+      name="contact" 
+      method="POST" 
+      data-netlify="true" 
+      onsubmit="event.preventDefault();alert('Thank you! We will be in touch shortly.');this.reset();">
+      
+      <!-- Required by Netlify -->
+      <input type="hidden" name="form-name" value="contact" />
+      
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Tell us about your project…" required></textarea>
+      <button class="btn primary" type="submit">Send Message</button>
+    </form>
+
+    <p style="margin-top:2rem;text-align:center;">
+      📧 <a href="mailto:contact@eartho.tech">contact@eartho.tech</a> · 📞 +91‑9971‑331189
+    </p>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer style="background:#0b0d18;padding:2rem 1rem;text-align:center;font-size:0.9rem;color:var(--clr-muted);">
